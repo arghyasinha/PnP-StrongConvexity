@@ -8,6 +8,9 @@ This repository contains the code for two experiments from the paper:
 
 - This experiment finds a lower bound for the strong convexity index of the objective function.
 - The code for this experiment is in `Figure_1_Strong_Convexity_index.py`.
+- There are three command line arguments: `forward_model`, `image_id`, and `sigma` in [0,255].
+- where the `image_id` referes to the name of the image from `images` folder.
+- Example usage: `python Figure_1_Strong_Convexity_index.py inpainting 1 120`
 
 ### Figure 2: Global Convergence of PnP
 
