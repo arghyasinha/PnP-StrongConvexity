@@ -1,13 +1,20 @@
-# This is code for  the paper " On the Strong Convexity of PnP Regularization using Linear Denoisers" by A. Sinha and K. N. Chaudhury
+# Code for the Paper: "On the Strong Convexity of PnP Regularization using Linear Denoisers" by A. Sinha and K. N. Chaudhury
 
-# This includes codes for two experiments:
+This repository contains the code for two experiments from the paper:
 
-## Figure 1. It finds a lower bound to the strong convexity index of the objective. The code is hosted in ```Figure_1_Strong_Convexity_index.py```.
+## Experiments
 
-## Figure 2. Demonstrates the global convergence of PnP using a symmetric denoiser ```DSG-NLM``` and a nonsymmetric denoiser ```NLM```. The code is hosted in ```Figure_2_Global_Convergence_inpainting.py```.
+### Figure 1: Strong Convexity Index
 
+- This experiment finds a lower bound for the strong convexity index of the objective function.
+- The code for this experiment is in `Figure_1_Strong_Convexity_index.py`.
 
+### Figure 2: Global Convergence of PnP
 
+- This experiment demonstrates the global convergence of PnP using two denoisers: a symmetric denoiser (`DSG-NLM`) and a nonsymmetric denoiser (`NLM`).
+- The code for this experiment is in `Figure_2_Global_Convergence_inpainting.py`.
+
+---
 
 
 
