@@ -1,4 +1,4 @@
-# Code for the Paper: "On the Strong Convexity of PnP Regularization using Linear Denoisers" by A. Sinha and K. N. Chaudhury
+## Code for the Paper: "On the Strong Convexity of PnP Regularization using Linear Denoisers" by A. Sinha and K. N. Chaudhury
 
 This repository contains the code for two experiments from the paper:
 
@@ -14,6 +14,8 @@ This repository contains the code for two experiments from the paper:
 - This experiment demonstrates the global convergence of PnP using two denoisers: a symmetric denoiser (`DSG-NLM`) and a nonsymmetric denoiser (`NLM`).
 - The code for this experiment is in `Figure_2_Global_Convergence_inpainting.py`.
 
+#### In addition, an example file has been provided (`Example_of_denoiser.ipynb`) on the denoiser `DSG-NLM`.
+
 ---
 
 
@@ -21,7 +23,7 @@ This repository contains the code for two experiments from the paper:
 
 
 
-# Instructions to Activate Conda Environment and Install Required Packages
+## Instructions to Activate Conda Environment and Install Required Packages
 
 ## Step 1: Activate Conda Environment
 
