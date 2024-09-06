@@ -1,3 +1,16 @@
+"""
+"On the Strong Convexity of PnP Regularization using Linear Denoisers" by A. Sinha and K. N. Chaudhury"
+
+
+This script demonstrates the inpainting reconstruction of an image using the PnP-ISTA (and PnP-FISTA) and 
+data-driven linear denoisers such as DSG-NLM and NLM. The results are shown in Figure 2 of the paper.
+A median-filtered image is used as the guide image for the denoiser.
+It demonstrates the global convergence of PnP-ISTA by showing the independece of the starting image.
+
+"""
+
+
+
 from denoisers.NLM import *
 from PIL import *
 from iterative_algorithms import *

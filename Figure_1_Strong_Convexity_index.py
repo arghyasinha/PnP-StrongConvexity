@@ -1,3 +1,19 @@
+"""
+
+"On the Strong Convexity of PnP Regularization using Linear Denoisers" by A. Sinha and K. N. Chaudhury"
+
+This script demonstrates the computation of the strong convexity index
+of the objective for the DSG-NLM denoiser. The results are shown in Figure 1 of the paper.
+The script takes the forward model, image ID, and noise level as command line arguments.
+The script then computes the strong convexity index of the objective function
+for the DSG-NLM denoiser using the power method as described in the paper and supplement.
+
+The parameters of the denoiser are set based on the forward model. 
+The grouth truth image has been considered as the guide image for the denoiser.
+"""
+
+
+
 # Import necessary modules and functions
 from denoisers.NLM import *  # Non-local means denoiser
 from PIL import *  # Image handling (PIL stands for Python Imaging Library)
@@ -45,9 +61,9 @@ if forward_model == "inpainting":
     # Apply the forward model to the image
     b0 = A_function(image, **A_kwargs)
 
-    # Set parameters for the non-local means (NLM) denoiser
-    patch = 3  # Patch radius for NLM
-    window = 5  # Window radius for NLM
+    # Set parameters for the DSG-NLM denoiser
+    patch = 3  # Patch radius for DSG-NLM
+    window = 5  # Window radius for DSG-NLM
     sigma = np.float64(sys.argv[3]) / 255.0  # Standard deviation (sigma) for noise, provided via command line
     dn = {"guide_image": image, "patch_rad": patch, "window_rad": window, "sigma": sigma}  # Denoiser arguments
 
@@ -61,9 +77,9 @@ if forward_model == "deblurring":
     # Apply the forward model to the image
     b0 = A_function(image, **A_kwargs)
 
-    # Set parameters for the non-local means (NLM) denoiser
-    patch = 3  # Patch radius for NLM
-    window = 5  # Window radius for NLM
+    # Set parameters for the DSg-NLM denoiser
+    patch = 3  # Patch radius for DSG-NLM
+    window = 5  # Window radius for DSG-NLM
     sigma = np.float64(sys.argv[3]) / 255.0  # Standard deviation (sigma) for noise, provided via command line
     dn = {"guide_image": image, "patch_rad": patch, "window_rad": window, "sigma": sigma}  # Denoiser arguments
 
