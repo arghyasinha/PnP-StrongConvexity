@@ -1,4 +1,12 @@
-## Code for the Paper: "On the Strong Convexity of PnP Regularization using Linear Denoisers" by A. Sinha and K. N. Chaudhury
+## Code for the Paper:
+  journal={IEEE Signal Processing Letters}, 
+  title={On the Strong Convexity of PnP Regularization Using Linear Denoisers}, 
+  author={Sinha, Arghya and Chaudhury, Kunal N.},
+  year={2024},
+  volume={31},
+  pages={2790-2794},
+  doi={10.1109/LSP.2024.3475913}}
+
 
 This repository contains the code for two experiments from the paper:
 
