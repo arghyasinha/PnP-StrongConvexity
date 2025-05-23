@@ -1,67 +1,85 @@
-## Code for the Paper:
-  journal={IEEE Signal Processing Letters}, 
-  title={On the Strong Convexity of PnP Regularization Using Linear Denoisers}, 
-  author={Sinha, Arghya and Chaudhury, Kunal N.},
-  year={2024},
-  volume={31},
-  pages={2790-2794},
-  doi={10.1109/LSP.2024.3475913}}
+# 🧑‍💻 Code for the Paper
 
-
-This repository contains the code for two experiments from the paper:
-
-## Experiments
-
-### Figure 1: Strong Convexity Index
-
-- This experiment finds a lower bound for the strong convexity index of the objective function.
-- The code for this experiment is in `Figure_1_Strong_Convexity_index.py`.
-- There are three command line arguments: `forward_model`, `image_id`, and `sigma` in [0,255].
-- where the `forward model` can be selected either `inpainting` or `deblurring`. The `image_id` referes to the name of the image from `images` folder.
-- Example usage: `python Figure_1_Strong_Convexity_index.py inpainting 1 120`
-
-### Figure 2: Global Convergence of PnP
-
-- This experiment demonstrates the global convergence of PnP using two denoisers: a symmetric denoiser (`DSG-NLM`) and a nonsymmetric denoiser (`NLM`).
-- The code for this experiment is in `Figure_2_Global_Convergence_inpainting.py`.
-
-#### In addition, an example file has been provided (`Example_of_denoiser.ipynb`) on the denoiser `DSG-NLM`.
+**On the Strong Convexity of PnP Regularization Using Linear Denoisers**  
+*Arghya Sinha, Kunal N. Chaudhury*  
+IEEE Signal Processing Letters, 2024, Vol. 31, pp. 2790–2794  
+[DOI: 10.1109/LSP.2024.3475913](https://doi.org/10.1109/LSP.2024.3475913)
 
 ---
 
+This repository contains code for the key experiments from our paper.
 
+---
 
+## 👥 Authors
 
+- [Arghya Sinha](https://arghyasinha.github.io)
+- [Kunal N. Chaudhury](https://sites.google.com/site/kunalnchaudhury/home)
 
+---
 
-## Instructions to Activate Conda Environment and Install Required Packages
+## 🧪 Experiments
 
-## Step 1: Activate Conda Environment
+### 📈 Figure 1: Strong Convexity Index
 
-1. Open your terminal or command prompt.
+- Estimates a lower bound for the strong convexity index of the objective function.
+- Code: [`Figure_1_Strong_Convexity_index.py`](Figure_1_Strong_Convexity_index.py)
+- **Arguments:**  
+  - `forward_model`: `"inpainting"` or `"deblurring"`
+  - `image_id`: Name of the image in the `images` folder.
+  - `sigma`: Noise level (integer in `[0, 255]`)
+- **Example usage:**
+  ```bash
+  python Figure_1_Strong_Convexity_index.py inpainting 1 120
+  ```
 
-2. Create a new conda environment with Python version 3.8.18 (if you haven't already):
+### 📊 Figure 2: Global Convergence of PnP
 
-    ```sh
-    conda create --name myenv python=3.8.18
-    ```
+- Demonstrates PnP global convergence with two denoisers:  
+  - Symmetric denoiser: `DSG-NLM`
+  - Nonsymmetric denoiser: `NLM`
+- Code: [`Figure_2_Global_Convergence_inpainting.py`](Figure_2_Global_Convergence_inpainting.py)
 
-3. Activate the newly created conda environment:
+#### 💡 Example Notebook
 
-    ```sh
-    conda activate myenv
-    ```
+- See [`Example_of_denoiser.ipynb`](Example_of_denoiser.ipynb) for a demo of the `DSG-NLM` denoiser.
 
-## Step 2: Install Required Packages
+---
 
-1. Ensure you are in the root directory of your project where `dependencies.sh` is located.
+## ⚙️ Setup Instructions
 
-2. Run the `dependencies.sh` script to install the required packages:
+### 1️⃣ Activate Conda Environment
 
-    ```sh
-    sh dependencies.sh
-    ```
+```bash
+# Create a new conda environment with Python 3.8.18
+conda create --name myenv python=3.8.18
 
-That's it! Your conda environment should now be activated with Python 3.8.18, and the required packages should be installed.
+# Activate the environment
+conda activate myenv
+```
 
+### 2️⃣ Install Required Packages
 
+Ensure you are in the root directory (where `dependencies.sh` is located):
+
+```bash
+sh dependencies.sh
+```
+
+Your environment should now be ready with Python 3.8.18 and all required packages installed.
+
+---
+
+## 📚 Citation
+
+```bibtex
+@article{sinha2024strongconvexitypnp,
+  author  = {Sinha, Arghya and Chaudhury, Kunal N.},
+  title   = {On the Strong Convexity of PnP Regularization Using Linear Denoisers},
+  journal = {IEEE Signal Processing Letters},
+  year    = {2024},
+  volume  = {31},
+  pages   = {2790-2794},
+  doi     = {10.1109/LSP.2024.3475913}
+}
+```
